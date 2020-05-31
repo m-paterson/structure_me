@@ -37,17 +37,17 @@ on the files making it easier for new users to create their first programs.
 
 Considering you execute the above commands in a folder named 'project_name' a 
 succesful execution will generate the following folder tree:  
-    project_name
-        ├── examples
-        │   └── example.py
-        ├── src
-        │   └── project_name
-        │       └── __init__.py
-        ├── tests
-        │   └── __init__.py
-        ├── LICENSE.txt
-        ├── README.MD
-        └── setup.py
+    project_name  
+        ├── examples  
+        │   └── example.py  
+        ├── src  
+        │   └── project_name  
+        │       └── __init__.py  
+        ├── tests  
+        │   └── __init__.py  
+        ├── LICENSE.txt  
+        ├── README.MD  
+        └── setup.py  
 
 ## Author
 
