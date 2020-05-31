@@ -15,7 +15,11 @@
 - [Copyright and license](#copyright-and-license)
 
 ## Quick start
-
+Instalation:
+1. pip:
+    `pip install structure_me`
+2. github:
+    `git clone https://github.com/the-marcos/structure_me.git`
 
 ## Examples
 
