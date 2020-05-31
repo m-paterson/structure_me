@@ -1,11 +1,10 @@
-<p align='center'>
-            __                      __                                          
-     _____ / /_ _____ __  __ _____ / /_ __  __ _____ ___         ____ ___   ___ 
-    / ___// __// ___// / / // ___// __// / / // ___// _ \       / __ `__ \ / _ \
-   (__  )/ /_ / /   / /_/ // /__ / /_ / /_/ // /   /  __/      / / / / / //  __/
-  /____/ \__//_/    \__,_/ \___/ \__/ \__,_//_/    \___/______/_/ /_/ /_/ \___/ 
-                                                       /_____/                 
-
+            __                      __                                            
+     _____ / /_ _____ __  __ _____ / /_ __  __ _____ ___         ____ ___   ___   
+    / ___// __// ___// / / // ___// __// / / // ___// _ \       / __ `__ \ / _ \  
+   (__  )/ /_ / /   / /_/ // /__ / /_ / /_/ // /   /  __/      / / / / / //  __/  
+  /____/ \__//_/    \__,_/ \___/ \__/ \__,_//_/    \___/______/_/ /_/ /_/ \___/   
+                                                       /_____/                   
+  
 The idea behind this very simple package is to help newbies and pros in creating
 a starting structure for projects involving python following some of the general
 guidelines and principles widely used.
@@ -27,5 +26,3 @@ Inspirations:
 https://packaging.python.org/guides/distributing-packages-using-setuptools/
 https://dev.to/codemouse92/dead-simple-python-project-structure-and-imports-38c6
 https://github.com/yngvem/python-project-structure
-
-</p>
