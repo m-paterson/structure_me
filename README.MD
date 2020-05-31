@@ -24,7 +24,7 @@
 ## Author
 
 **Marcos Paterson**
-- <https://github.com/the-marcos    >
+- <https://github.com/the-marcos>
 
 
 ## Inspiration and background
