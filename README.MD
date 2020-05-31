@@ -5,7 +5,7 @@
       /____/ \__//_/    \__,_/ \___/ \__/ \__,_//_/    \___/______/_/ /_/ /_/ \___/ 
                                                            /_____/                 
   
-### Helping newbies and pros in creating a starting structure for projects involving python following some of the general guidelines and principles widely used.  
+### Helping newbies and pros in creating a starting structure for projects involving python, following some of the general guidelines and principles widely used.  
   
 
 ## Table of Contents
@@ -22,6 +22,9 @@
 
 
 ## Author
+
+**Marcos Paterson**
+- <https://github.com/the-marcos    >
 
 
 ## Inspiration and background
