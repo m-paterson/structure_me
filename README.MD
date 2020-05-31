@@ -44,15 +44,14 @@ TODO: include tree s/s and files with description
 
 ## Inspiration and background
 
-In May 2020, while in the initial steps of learning django, it was amazing to
-see how easy it was to create a new project/app and that django had a functionality
+In May 2020, while in the initial steps of learning django, I was amazed to
+see how easy it was to create a new project/app, and that django had a functionality
 that would create an entire folder structure and the baseline files with helpful
 tips along the way.
 
 Then started the search to find a similar package that would do just that. Create
-a baseline template, some of the files to workout a project structure so I could
-dig into the core of the development, without worrying about having the structure
-around it.
+a baseline/boiler plate folder and file structure, so I could dig into the core 
+of the development, without worrying about having the structure around it.
 
 I found none. That would fit my needs. Simple. Straight Forward. So here we go!
 If by any chance there are other more fitted alternatives, I'd love to hear about it.
