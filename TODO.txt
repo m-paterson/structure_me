@@ -1,0 +1,13 @@
+project_name
+├── examples
+│   └── example.py
+├── src
+│   └── package_name
+│       └── __init__.py
+├── tests
+│   └── __init__.py
+├── MANIFEST.in
+├── README.MD
+├── requirements.txt
+├── setup.cfg
+├── setup.py
