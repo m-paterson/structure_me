@@ -54,7 +54,7 @@ a baseline/boiler plate folder and file structure, so I could dig into the core
 of the development, without worrying about having the structure around it.
 
 I found none. That would fit my needs. Simple. Straight Forward. So here we go!
-If by any chance there are other more fitted alternatives, I'd love to hear about it.
+If by any chance you know of other more fitted alternatives, I'd love to hear about it.
 
 Inspirations:
 - <https://packaging.python.org/guides/distributing-packages-using-setuptools/>
