@@ -40,12 +40,12 @@ succesful execution will generate the following folder tree:
 ```
     project_name  
         ├── examples  
-        │    └── example.py  
+        │   └── example.py  
         ├── src  
         │    └── project_name  
-        │       └── __init__.py  
+        │        └── __init__.py  
         ├── tests  
-        │    └── __init__.py  
+        │   └── __init__.py  
         ├── LICENSE.txt  
         ├── README.MD  
         └── setup.py  
