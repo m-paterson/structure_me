@@ -22,7 +22,6 @@ Instalation:
     `git clone https://github.com/the-marcos/structure_me.git`
 
 
-
 ## Examples
 Example usage can be checked by running:  
 `python structure_me -h`
@@ -32,12 +31,23 @@ on the files making it easier for new users to create their first programs.
   
 `python structure_me -n <project_name> -v`
 
-TODO: include tree s/s and files with description
-
 2. Simple: create a simple folder/file structure. No comments.
 
 `python structure_me -n <project_name>`
 
+Considering you execute the above commands in a folder named 'project_name' a 
+succesful execution will generate the following folder tree:
+    project_name
+        ├── examples
+        │   └── example.py
+        ├── src
+        │   └── project_name
+        │       └── __init__.py
+        ├── tests
+        │   └── __init__.py
+        ├── LICENSE.txt
+        ├── README.MD
+        └── setup.py
 
 ## Author
 
