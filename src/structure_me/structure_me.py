@@ -7,9 +7,12 @@ def main():
     parser.add_argument(
         '-v', 
         '--verbose', 
-        help='include tips and directions on files',
+        help='include tips and directions on files. If no argument is passed, the'
+             ' program will create a similar structure but the files will not '
+             'contain any text.',
         action='store_true',
     )
+
     args = parser.parse_args()
 
     if args.verbose:
