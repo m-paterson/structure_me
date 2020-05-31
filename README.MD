@@ -42,9 +42,9 @@ I found none. That would fit my needs. Simple. Straight Forward. So here we go!
 If by any chance there are other more fitted alternatives, I'd love to hear about it.
 
 Inspirations:
-https://packaging.python.org/guides/distributing-packages-using-setuptools/
-https://dev.to/codemouse92/dead-simple-python-project-structure-and-imports-38c6
-https://github.com/yngvem/python-project-structure
+- <https://packaging.python.org/guides/distributing-packages-using-setuptools/>
+- <https://dev.to/codemouse92/dead-simple-python-project-structure-and-imports-38c6>
+- <https://github.com/yngvem/python-project-structure>
 
 
 ## Copyright and license
