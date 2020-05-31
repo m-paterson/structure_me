@@ -24,16 +24,19 @@ Instalation:
 
 
 ## Examples
+Example usage can be checked by running:  
+`python structure_me -h`
+  
 1. Descriptive files: create folder/file structures with **django** like comments
 on the files making it easier for new users to create their first programs.
   
-`python structure_me <project_name>`
+`python structure_me -n <project_name> -v`
 
 TODO: include tree s/s and files with description
 
 2. Simple: create a simple folder/file structure. No comments.
 
-`python structure_me --simple <project_name>`
+`python structure_me -n <project_name>`
 
 
 ## Author

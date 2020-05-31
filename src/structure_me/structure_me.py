@@ -3,6 +3,7 @@ import os
 import sys
 import argparse
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -75,9 +76,7 @@ def create_files(root_folder, project_name, verbose=False):
             src_folder = os.path.join(root_folder, f'src\{project_name}')
             test_folder = os.path.join(root_folder, 'tests')
             file_list = [
-                os.path.join(root_folder, 'MANIFEST.in'),
                 os.path.join(root_folder, 'README.MD'),
-                os.path.join(root_folder, 'setup.cfg'),
                 os.path.join(root_folder, 'setup.py'),
                 os.path.join(examples_folder, 'example.py'),
                 os.path.join(src_folder, '__init__.py'),
@@ -90,6 +89,7 @@ def create_files(root_folder, project_name, verbose=False):
         except FileExistsError as e:
             print('The destination folder already contain files. Specify an empty '
                   'location.', file=sys.stderr)
+            raise
 
 
 if __name__ == "__main__":
