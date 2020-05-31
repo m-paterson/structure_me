@@ -48,11 +48,10 @@ def create_dirs(root_folder, project_name):
         nothing.
     '''
     try:
+        folder_list = ['examples', 'src', f'src/{project_name}', 'tests', 'data']
         os.mkdir(root_folder)
-        os.mkdir(os.path.join(root_folder, 'examples'))
-        os.mkdir(os.path.join(root_folder, f'src'))
-        os.mkdir(os.path.join(root_folder, f'src\{project_name}'))
-        os.mkdir(os.path.join(root_folder, 'tests'))
+        for folder in folder_list:
+            os.mkdir(os.path.join(root_folder, folder))
     except FileExistsError as e:
         print('The destination folder already exists.', file=sys.stderr)
         raise
@@ -75,20 +74,18 @@ def create_files(root_folder, project_name, verbose=False):
             examples_folder = os.path.join(root_folder, 'examples')
             src_folder = os.path.join(root_folder, f'src\{project_name}')
             test_folder = os.path.join(root_folder, 'tests')
-            with open(os.path.join(root_folder, 'MANIFEST.in'), 'w'):
-                pass
-            with open(os.path.join(root_folder, 'README.MD'), 'w'):
-                pass
-            with open(os.path.join(root_folder, 'setup.cfg'), 'w'):
-                pass
-            with open(os.path.join(root_folder, 'setup.py'), 'w'):
-                pass
-            with open(os.path.join(examples_folder, 'example.py'), 'w'):
-                pass
-            with open(os.path.join(src_folder, '__init__.py'), 'w'):
-                pass
-            with open(os.path.join(test_folder, '__init__.py'), 'w'):
-                pass
+            file_list = [
+                os.path.join(root_folder, 'MANIFEST.in'),
+                os.path.join(root_folder, 'README.MD'),
+                os.path.join(root_folder, 'setup.cfg'),
+                os.path.join(root_folder, 'setup.py'),
+                os.path.join(examples_folder, 'example.py'),
+                os.path.join(src_folder, '__init__.py'),
+                os.path.join(test_folder, '__init__.py'),
+            ]
+            for file in file_list:
+                with open(file, 'w'):
+                    pass
 
         except FileExistsError as e:
             print('The destination folder already contain files. Specify an empty '
