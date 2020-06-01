@@ -3,16 +3,19 @@ See:
 https://packaging.python.org/guides/distributing-packages-using-setuptools/
 https://github.com/pypa/sampleproject
 """
+# this can be set to a simple setup() call, with the main config being set 
+# on setup.cfg
 
-# Always prefer setuptools over distutils
 from setuptools import setup, find_packages
-import os
+from os import path
 
-here = os.path.abspath(os.path.dirname(__file__))
+here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
+
+# Always prefer setuptools over distutils
 
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
@@ -136,7 +139,7 @@ setup(
     python_requires='>=3.5, <4',
 
     # This field lists other packages that your project depends on to run.
-    # Any package you put here will be installed by pip when your project is
+    # Any package you put here will be installed by pip when your project   is
     # installed, so they must be valid existing projects.
     #
     # For an analysis of "install_requires" vs pip's requirements files see:

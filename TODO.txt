@@ -2,12 +2,10 @@ project_name
 ├── examples
 │   └── example.py
 ├── src
-│   └── package_name
+│   └── project_name
 │       └── __init__.py
 ├── tests
 │   └── __init__.py
-├── MANIFEST.in
+├── LICENSE.txt
 ├── README.MD
-├── requirements.txt
-├── setup.cfg
-├── setup.py
+└── setup.py
