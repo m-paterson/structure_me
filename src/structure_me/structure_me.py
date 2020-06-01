@@ -26,6 +26,25 @@ def main():
     current_pwd = os.getcwd()
     project_folder = os.path.join(current_pwd, args.name)
     project_name = args.name
+    
+    folder_list = [
+        project_folder, 
+        'examples', 
+        'src', 
+        f'src/{project_name}', 
+        'tests',
+        'data',
+    ]
+
+    file_list = [
+        'README.md',
+        'setup.py',
+        'setup.cfg',
+        'MANIFEST.in',
+        'examples/example.py',
+        'src/__init__.py',
+        '__init__.py',
+    ]
 
     if args.verbose:
         print(f'verbose structure {project_name}')
@@ -35,34 +54,36 @@ def main():
                    ' does not exist.')
         else:
             print(f'creating {project_folder}...')
-            create_dirs(project_folder, project_name)
-            create_files(project_folder, project_name, verbose=False)
+            create_dirs(folder_list, project_name)
+            create_files(project_folder, file_list, verbose=False)
 
 
-def create_dirs(root_folder, project_name):
+def create_dirs(folder_list, project_name):
     '''Create folder structure.
     
     Args:
-        root_folder: str. root project folder passed as argument to the main script.
+        folder_list: list. project folder list defined in main.
+        project_name: str. project name passed as argument when invoking the main
+            function.
 
     Returns:
         nothing.
     '''
     try:
-        folder_list = ['examples', 'src', f'src/{project_name}', 'tests', 'data']
-        os.mkdir(root_folder)
-        for folder in folder_list:
-            os.mkdir(os.path.join(root_folder, folder))
+        os.mkdir(folder_list[0])
+        for folder in folder_list[1:]:
+            os.mkdir(os.path.join(folder_list[0], folder))
     except FileExistsError as e:
         print('The destination folder already exists.', file=sys.stderr)
         raise
 
 
-def create_files(root_folder, project_name, verbose=False):
+def create_files(root_folder, file_list, verbose=False):
     '''Create boilerplate files.
 
     Args:
-        root_folder: str. root project folder passed as argument to the main script.
+        root_folder: str. project root folder.
+        file_list: list. 
         verbose: bool. whether or not to add tips/comments to files.
 
     Returns:
@@ -72,20 +93,9 @@ def create_files(root_folder, project_name, verbose=False):
         print('verbose')
     else:
         try:
-            examples_folder = os.path.join(root_folder, 'examples')
-            src_folder = os.path.join(root_folder, f'src\{project_name}')
-            test_folder = os.path.join(root_folder, 'tests')
-            file_list = [
-                os.path.join(root_folder, 'README.MD'),
-                os.path.join(root_folder, 'setup.py'),
-                os.path.join(examples_folder, 'example.py'),
-                os.path.join(src_folder, '__init__.py'),
-                os.path.join(test_folder, '__init__.py'),
-            ]
             for file in file_list:
-                with open(file, 'w'):
+                with open(os.path.join(root_folder, file), 'w'):
                     pass
-
         except FileExistsError as e:
             print('The destination folder already contain files. Specify an empty '
                   'location.', file=sys.stderr)
