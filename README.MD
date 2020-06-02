@@ -69,13 +69,14 @@ hands.
 Considering you follow the guidance and execute the above commands in a folder 
 named 'project_name' a succesful execution will generate the following folder tree:  
 ```
-project_name  
-    ├── examples  
+project_name 
+    ├── data/ 
+    ├── examples/  
     │   └── example.py  
-    ├── src  
+    ├── src/  
     │    └── project_name  
     │        └── __init__.py  
-    ├── tests  
+    ├── tests/  
     │   └── __init__.py  
     ├── LICENSE.txt  
     ├── README.MD  
