@@ -58,6 +58,10 @@ on the files making it easier for new users to create their first programs.
   
 `structure_me -n <project_name> -v`
 
+NOTE: as of version 0.50a the comments provided are not super comprehensive, but
+give a decent number of pointers on setup.py. Most of the work is still in your
+hands.
+
 2. Simple: create a simple folder/file structure. No comments.
 
 `structure_me -n <project_name>`
