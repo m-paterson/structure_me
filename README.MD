@@ -19,7 +19,7 @@
 - pip:  
     `pip install structure_me`
 - github:  
-    `git clone https://github.com/the-marcos/structure_me.git`
+    `git clone https://github.com/m-paterson/structure_me.git`
 
 ### General Guidance
 The usage should be rather straight forward. Following Django's default approach
@@ -58,7 +58,7 @@ on the files making it easier for new users to create their first programs.
   
 `structure_me -n <project_name> -v`
 
-NOTE: as of version 0.52a0 the comments provided are not super comprehensive, but
+NOTE: as of version 0.53a0 the comments provided are not super comprehensive, but
 give a decent number of pointers on setup.py. Most of the work is still in your
 hands.
 
@@ -88,7 +88,7 @@ project_name
 ## Author
 
 **Marcos Paterson**
-- <https://github.com/the-marcos>
+- <https://github.com/m-paterson>
 
 
 ## Inspiration and background
@@ -113,5 +113,5 @@ Inspirations:
 
 ## Copyright and license
 
-Code and documentation copyright 2020 [the-marcos](https://github.com/the-marcos). 
-Code released under the [MIT License](https://github.com/the-marcos/structure_me/blob/master/LICENSE).
+Code and documentation copyright 2020 [Marcos Paterson](https://github.com/m-paterson). 
+Code released under the [MIT License](https://github.com/m-paterson/structure_me/blob/master/LICENSE).
