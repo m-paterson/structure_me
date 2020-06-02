@@ -23,8 +23,8 @@ def main():
 
     args = parser.parse_args()
     
-    current_pwd = os.getcwd()
-    project_folder = os.path.join(current_pwd, args.name)
+    current_dir = os.getcwd()
+    project_folder = os.path.join(current_dir, args.name)
     project_name = args.name
     
     folder_list = [
@@ -46,16 +46,17 @@ def main():
         '__init__.py',
     ]
 
+
+    verbose = False
     if args.verbose:
-        print(f'verbose structure {project_name}')
+        verbose = True
+    if os.path.exists(project_folder):
+        print(f'{project_folder} already exists. Please specify a target that'
+                ' does not exist.')
     else:
-        if os.path.exists(project_folder):
-            print(f'{project_folder} already exists. Please specify a target that'
-                   ' does not exist.')
-        else:
-            print(f'creating {project_folder}...')
-            create_dirs(folder_list, project_name)
-            create_files(project_folder, file_list, verbose=False)
+        print(f'creating {project_folder}...')
+        create_dirs(folder_list, project_name)
+        create_files(project_folder, file_list, verbose=verbose)
 
 
 def create_dirs(folder_list, project_name):
@@ -89,8 +90,25 @@ def create_files(root_folder, file_list, verbose=False):
     Returns:
         nothing.
     '''
+    __location__ = os.path.realpath(
+        os.path.join(
+            os.getcwd(), 
+            os.path.dirname(__file__)
+        )
+    )
     if verbose:
-        print('verbose')
+        try:
+            for file in file_list:
+                content = ''
+                if file in ['README.md', 'setup.py', 'setup.cfg', 'MANIFEST.in']:
+                    with open(os.path.join(__location__, f'data/sample_{file}'), 'r', encoding='utf-8') as sample:
+                        content = sample.read()
+                with open(os.path.join(root_folder, file), 'w') as target:
+                    target.writelines(content)
+        except FileExistsError as e:
+            print('It seems that some of the files already exist in the target location. '
+                  'Please specify and empty target location!')
+            raise
     else:
         try:
             for file in file_list:

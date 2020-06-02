@@ -49,18 +49,18 @@ you have setuptools installed and follow along the instructions [here](https://p
 
 ## Examples
 Example usage can be checked by running:  
-`python structure_me -h`
+`structure_me -h`
 
 There are two predefined ways of running this program:
   
 1. Verbose files: create folder/file structures with **django** like comments
 on the files making it easier for new users to create their first programs.
   
-`python structure_me -n <project_name> -v`
+`structure_me -n <project_name> -v`
 
 2. Simple: create a simple folder/file structure. No comments.
 
-`python structure_me -n <project_name>`
+`structure_me -n <project_name>`
 
 Considering you follow the guidance and execute the above commands in a folder 
 named 'project_name' a succesful execution will generate the following folder tree:  
@@ -101,6 +101,7 @@ If by any chance you know of other more fitted alternatives, I'd love to hear ab
 Inspirations:
 - <https://packaging.python.org/guides/distributing-packages-using-setuptools/>
 - <https://github.com/yngvem/python-project-structure>
+- <https://the-hitchhikers-guide-to-packaging.readthedocs.io>
 
 
 ## Copyright and license
