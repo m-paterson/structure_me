@@ -79,7 +79,9 @@ project_name
     ├── tests/  
     │   └── __init__.py  
     ├── LICENSE.txt  
+    ├── MANIFEST.in
     ├── README.MD  
+    ├── setup.cfg
     └── setup.py  
 ```
 
