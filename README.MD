@@ -19,7 +19,7 @@
 - pip:  
     `pip install structure_me`
 - github:  
-    `git clone https://github.com/m-paterson/structure_me.git`
+    `git clone https://github.com/marcospaterson/structure_me.git`
 
 ### General Guidance
 The usage should be rather straight forward. Following Django's default approach
@@ -88,7 +88,7 @@ project_name
 ## Author
 
 **Marcos Paterson**
-- <https://github.com/m-paterson>
+- <https://github.com/marcospaterson>
 
 
 ## Inspiration and background
@@ -113,5 +113,5 @@ Inspirations:
 
 ## Copyright and license
 
-Code and documentation copyright 2020 [Marcos Paterson](https://github.com/m-paterson). 
-Code released under the [MIT License](https://github.com/m-paterson/structure_me/blob/master/LICENSE).
+Code and documentation copyright 2020 [Marcos Paterson](https://github.com/marcospaterson). 
+Code released under the [MIT License](https://github.com/marcospaterson/structure_me/blob/master/LICENSE).
