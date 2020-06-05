@@ -90,7 +90,7 @@ def create_files(root_folder, file_list, verbose=False):
     Returns:
         nothing.
     '''
-    __location__ = os.path.realpath(
+    _location = os.path.realpath(
         os.path.join(
             os.getcwd(), 
             os.path.dirname(__file__)
@@ -101,7 +101,7 @@ def create_files(root_folder, file_list, verbose=False):
             for file in file_list:
                 content = ''
                 if file in ['README.md', 'setup.py', 'setup.cfg', 'MANIFEST.in']:
-                    with open(os.path.join(__location__, f'data/sample_{file}'), 'r', encoding='utf-8') as sample:
+                    with open(os.path.join(_location, f'data/sample_{file}'), 'r', encoding='utf-8') as sample:
                         content = sample.read()
                 with open(os.path.join(root_folder, file), 'w') as target:
                     target.writelines(content)
