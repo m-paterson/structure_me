@@ -7,8 +7,8 @@ import argparse
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '-v', 
-        '--verbose', 
+        '-e', 
+        '--expressive', 
         help='include tips and directions on files. If no argument is passed, the'
              ' program will create a similar structure but the files will not '
              'contain any text.',
@@ -31,32 +31,35 @@ def main():
         project_folder, 
         'examples', 
         'src', 
-        f'src/{project_name}', 
+        f'src/{project_name}',
+        f'src/{project_name}/data',
         'tests',
-        'data',
     ]
 
     file_list = [
         'README.md',
         'setup.py',
         'setup.cfg',
-        'MANIFEST.in',
         'examples/example.py',
-        'src/__init__.py',
-        '__init__.py',
+        f'src/{project_name}/__init__.py',
+        f'src/{proect_name}/{project_name}.py',
+        'tests/tests.py',
     ]
 
 
-    verbose = False
-    if args.verbose:
-        verbose = True
-    if os.path.exists(project_folder):
-        print(f'{project_folder} already exists. Please specify a target that'
-                ' does not exist.')
-    else:
-        print(f'creating {project_folder}...')
+    expressive = False
+    if args.expressive:
+        expressive = True
+    # if os.path.exists(project_folder):
+    #     print(f'{project_folder} already exists. Please specify a target that'
+    #             ' does not exist.')
+    # else:
+    #     print(f'creating {project_folder}...')
+    try:
         create_dirs(folder_list, project_name)
         create_files(project_folder, file_list, verbose=verbose)
+    except OSError as e:
+        raise e
 
 
 def create_dirs(folder_list, project_name):
@@ -100,7 +103,7 @@ def create_files(root_folder, file_list, verbose=False):
         try:
             for file in file_list:
                 content = ''
-                if file in ['README.md', 'setup.py', 'setup.cfg', 'MANIFEST.in']:
+                if file in ['README.md', 'setup.py', 'setup.cfg']:
                     with open(os.path.join(_location, f'data/sample_{file}'), 'r', encoding='utf-8') as sample:
                         content = sample.read()
                 with open(os.path.join(root_folder, file), 'w') as target:

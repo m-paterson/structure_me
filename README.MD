@@ -33,7 +33,7 @@ folder structure should look like after running the program.
 2. Navigate to the root folder you created and run the script following the recipe
 described in the [Examples](#examples) section below.
 
-3. I recommend using the --verbose argument as it will create files with descriptions
+3. I recommend using the --expressive argument as it will create files with descriptions
 that are easy to follow along. If you know what you are doing, or feeling adventurous
 be my guest to generate empty files and populating them yourselves.
 
@@ -53,10 +53,10 @@ Example usage can be checked by running:
 
 There are two predefined ways of running this program:
   
-1. Verbose files: create folder/file structures with **django** like comments
+1. Expressive files: create folder/file structures with **django** like comments
 on the files making it easier for new users to create their first programs.
   
-`structure_me -n <project_name> -v`
+`structure_me -n <project_name> -e`
 
 NOTE: as of version 0.53a0 the comments provided are not super comprehensive, but
 give a decent number of pointers on setup.py. Most of the work is still in your
@@ -69,17 +69,17 @@ hands.
 Considering you follow the guidance and execute the above commands in a folder 
 named 'project_name' a succesful execution will generate the following folder tree:  
 ```
-project_name 
-    ├── data/ 
+project_name/ 
     ├── examples/  
     │   └── example.py  
     ├── src/  
-    │    └── project_name  
-    │        └── __init__.py  
+    │    └── project_name/  
+    │         ├── data/  
+    │         ├── __init__.py  
+    │         └── project_name.py  
     ├── tests/  
-    │   └── __init__.py  
-    ├── LICENSE.txt  
-    ├── MANIFEST.in
+    │   └── tests.py  
+    ├── LICENSE  
     ├── README.MD  
     ├── setup.cfg
     └── setup.py  
