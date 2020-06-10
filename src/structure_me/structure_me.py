@@ -57,7 +57,7 @@ def main():
     #     print(f'creating {project_folder}...')
     try:
         create_dirs(folder_list, project_name)
-        create_files(project_folder, file_list, verbose=verbose)
+        create_files(project_folder, file_list, expressive=expressive)
     except OSError as e:
         raise e
 
@@ -82,13 +82,13 @@ def create_dirs(folder_list, project_name):
         raise
 
 
-def create_files(root_folder, file_list, verbose=False):
+def create_files(root_folder, file_list, expressive=False):
     '''Create boilerplate files.
 
     Args:
         root_folder: str. project root folder.
         file_list: list. 
-        verbose: bool. whether or not to add tips/comments to files.
+        expressive: bool. whether or not to add tips/comments to files.
 
     Returns:
         nothing.
@@ -99,7 +99,7 @@ def create_files(root_folder, file_list, verbose=False):
             os.path.dirname(__file__)
         )
     )
-    if verbose:
+    if expressive:
         try:
             for file in file_list:
                 content = ''
