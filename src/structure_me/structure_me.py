@@ -42,7 +42,7 @@ def main():
         'setup.cfg',
         'examples/example.py',
         f'src/{project_name}/__init__.py',
-        f'src/{proect_name}/{project_name}.py',
+        f'src/{project_name}/{project_name}.py',
         'tests/tests.py',
     ]
 
