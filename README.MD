@@ -6,7 +6,7 @@
                                                            /_____/                 
 ### Helping newbies and pros in creating a starting structure for python projects, following some of the general guidelines and principles widely used.  
   
-
+  
 ## Table of Contents
 - [Quick start](#quick-start)
 - [Examples](#examples)
@@ -18,8 +18,6 @@
 ### Instalation:
 - pip:  
     `pip install structure_me`
-- github:  
-    `git clone https://github.com/marcospaterson/structure_me.git`
 
 ### General Guidance
 The usage should be rather straight forward. Following Django's default approach
@@ -37,12 +35,14 @@ described in the [Examples](#examples) section below.
 that are easy to follow along. If you know what you are doing, or feeling adventurous
 be my guest to generate empty files and populating them yourselves.
 
-4. Create a repository in github, with a .gitignore and LICENSE files. In your command line: add remote > pull remote repository > stage local files > commit > push into remote.
+4. Create a repository in github, with a .gitignore and LICENSE files. In your 
+command line: add remote > pull remote repository > stage local files > commit > 
+push into remote.
 
 5. GO DEVELOP YOUR IDEAS!
 
-6. Once you are ready to ship an alpha or beta version of your software, ensure
-you have setuptools installed and follow along the instructions [here](https://packaging.python.org/guides/distributing-packages-using-setuptools/).
+6. Once you are ready to ship your software, ensure you have setuptools installed 
+and follow along the instructions [here](https://packaging.python.org/guides/distributing-packages-using-setuptools/).
 
 ## Examples
 Example usage can be checked by running:  
@@ -55,8 +55,9 @@ on the files making it easier for new users to create their first programs.
   
 `structure_me -n <project_name> -e`
 
-NOTE: as of version 0.63a0 the comments provided are not super comprehensive, but give a decent number of pointers on setup.py. Most of the work is still in your
-hands.
+NOTE: as of version 0.63b0 the comments provided are not super comprehensive, 
+but give a decent number of pointers on setup.py. Most of the work is still in 
+your hands.
 
 2. Simple: create a simple folder/file structure. No comments.
 
@@ -74,8 +75,7 @@ project_name/
     │         ├── __init__.py  
     │         └── project_name.py  
     ├── tests/  
-    │   └── tests.py  
-    ├── LICENSE  
+    │   └── tests.py    
     ├── README.MD  
     ├── setup.cfg
     └── setup.py  

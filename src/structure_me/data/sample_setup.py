@@ -181,7 +181,7 @@ setup(
     # executes the function `main` from this package when invoked:
     entry_points={  # Optional
         'console_scripts': [
-            'sample=sample:main',
+            'executable_name=project_name/main_file_name:main_function_name',
         ],
     },
 
