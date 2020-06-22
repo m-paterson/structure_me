@@ -35,9 +35,19 @@ section below.
 that are easy to follow along. If you know what you are doing, or feeling adventurous
 be my guest to generate empty files and populating them yourselves.
 
-4. Create a repository in github, with a .gitignore and LICENSE files. In your 
-command line: add remote > pull remote repository > stage local files > commit > 
-push into remote. Remote and local should now be in synch.
+4. start a local repo:
+`$ git init`
+
+4. Create a repository in github, with a .gitignore and LICENSE files. When you do
+so, local and remote repos will be out of synch. Do the following to bring them
+back to the same thread. In your command line:
+`$ git add *`
+`$ git commit -m 'initial commit message'`
+`$ git remote add origin https://github.com/your-username/your-repo.git`
+`$ git pull --allow-unrelated-histories origin master`
+`$ git push origin master`
+
+Your local and remote should now be in synch.
 
 5. GO DEVELOP YOUR IDEAS!
 
@@ -55,7 +65,7 @@ on the files making it easier for new users to create their first programs.
   
 `$ structure_me -n <project_name> -e`
 
-NOTE: as of version 1.6 the comments provided are not super comprehensive, 
+NOTE: as of version 1.7 the comments provided are not super comprehensive, 
 but give a decent number of pointers on setup.py and README.md. Most of the work 
 is still in your hands.
 
