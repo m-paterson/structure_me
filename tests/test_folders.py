@@ -1,8 +1,6 @@
 import os
-import unittest
 
-from structure_me.src.structure_me.helper_functions import create_folder
-from structure_me.src.structure_me.structure_me import folders_list
+from structure_me.helper_functions import app_folders, create_folder
 
 from .test_base import TestBaseCase
 
@@ -14,13 +12,10 @@ class TestFolders(TestBaseCase):
 
     def test_can_create_project_folder(self):
         root_folder = os.path.join(self.tmp_dir.name, "test_app")
+        folders_list = app_folders("test_app")
         for folder in folders_list:
             create_folder(root_folder, folder)
         folder_tree = [x[0] for x in os.walk(root_folder)]
         for folder in folders_list:
             folder = os.path.abspath(os.path.join(root_folder, folder))
             self.assertTrue(folder in folder_tree)
-
-
-if __name__ == "__main__":
-    unittest.main()

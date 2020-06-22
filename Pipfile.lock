@@ -1,0 +1,28 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "8bafb96613b8bded18e4b27b4967b024ee04a3269be2716d9bb489e3e38b374e"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.7"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "structure-me": {
+            "hashes": [
+                "sha256:bab73773adb83bfe0b4e8d86364c1c40ee151ef6788369320d2fba25e556ee4d"
+            ],
+            "path": "./dist/structure_me-1.5.tar.gz",
+            "version": "==1.5"
+        }
+    },
+    "develop": {}
+}

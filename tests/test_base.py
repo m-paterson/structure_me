@@ -9,4 +9,4 @@ class TestBaseCase(unittest.TestCase):
         self.tmp_dir = tempfile.TemporaryDirectory()
 
     def tearDown(self):
-        pass
+        self.tmp_dir.cleanup()

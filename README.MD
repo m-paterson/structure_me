@@ -24,12 +24,12 @@ The usage should be rather straight forward. Following Django's default approach
 and using setuptools to package your software, with the intent to hosting it in
 pypi.
 These are the steps I recommend:
-1. Create a root folder for your project, by default the same as your project's
-name. See the [Examples](#examples) section below for a sample tree of how your
-folder structure should look like after running the program.
+1. Create a folder where you want to save your app or navigate to where you want it
+to be saved. See the [Examples](#examples) section below for a sample tree of how 
+your folder structure should look like after running the program.
 
-2. Navigate to the root folder you created and run the script following the recipe
-described in the [Examples](#examples) section below.
+2. run the script following the recipe described in the [Examples](#examples) 
+section below.
 
 3. I recommend using the --expressive argument as it will create files with descriptions
 that are easy to follow along. If you know what you are doing, or feeling adventurous
@@ -37,7 +37,7 @@ be my guest to generate empty files and populating them yourselves.
 
 4. Create a repository in github, with a .gitignore and LICENSE files. In your 
 command line: add remote > pull remote repository > stage local files > commit > 
-push into remote.
+push into remote. Remote and local should now be in synch.
 
 5. GO DEVELOP YOUR IDEAS!
 
@@ -46,34 +46,31 @@ and follow along the instructions [here](https://packaging.python.org/guides/dis
 
 ## Examples
 Example usage can be checked by running:  
-`structure_me -h`
+`$ structure_me -h`
 
 There are two predefined ways of running this program:
   
 1. Expressive files: create folder/file structures with **django** like comments
 on the files making it easier for new users to create their first programs.
   
-`structure_me -n <project_name> -e`
+`$ structure_me -n <project_name> -e`
 
-NOTE: as of version 0.63b0 the comments provided are not super comprehensive, 
-but give a decent number of pointers on setup.py. Most of the work is still in 
-your hands.
+NOTE: as of version 1.6 the comments provided are not super comprehensive, 
+but give a decent number of pointers on setup.py and README.md. Most of the work 
+is still in your hands.
 
 2. Simple: create a simple folder/file structure. No comments.
 
 `structure_me -n <project_name>`
 
-Considering you follow the guidance and execute the above commands in a folder 
-named 'project_name' a succesful execution will generate the following folder tree:  
+The resulting folder structure given a succesful execution will look like the 
+following folder tree:  
 ```
 project_name/ 
-    ├── examples/  
-    │   └── example.py  
-    ├── src/  
-    │    └── project_name/  
-    │         ├── data/  
-    │         ├── __init__.py  
-    │         └── project_name.py  
+    ├── project_name/   
+    │   ├── data/  
+    │   ├── __init__.py  
+    │   └── project_name.py  
     ├── tests/  
     │   └── tests.py    
     ├── README.MD  
@@ -105,6 +102,7 @@ Inspirations:
 - <https://packaging.python.org/guides/distributing-packages-using-setuptools/>
 - <https://github.com/yngvem/python-project-structure>
 - <https://the-hitchhikers-guide-to-packaging.readthedocs.io>
+- <https://python-packaging.readthedocs.io/en/latest/minimal.html>
 
 
 ## Copyright and license

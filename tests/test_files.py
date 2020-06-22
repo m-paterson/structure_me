@@ -1,8 +1,6 @@
 import os
 
-from structure_me.src.structure_me.helper_functions import (create_file,
-                                                            create_folder)
-from structure_me.src.structure_me.structure_me import files_list
+from structure_me.helper_functions import create_file, create_folder
 
 from .test_base import TestBaseCase
 

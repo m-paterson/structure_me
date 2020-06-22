@@ -2,7 +2,40 @@
 """Functions module to hold the functions for folder and file creation from the
 main program."""
 
+import argparse
 import os
+
+
+def parse_inputs(args):
+    """parse arguments passed when running the script
+    Args:
+        None
+
+    Returns:
+        parsed arguments
+    """
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        "-e",
+        "--expressive",
+        help="include tips and directions on files. If no argument is passed, the"
+        " program will create a similar structure but the files will not "
+        "contain any text.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "-n",
+        "--name",
+        help="project name, used to create the folder name. ideally no "
+        "spaces or funny characters should be passed or it might raise "
+        "and exception.",
+        action="store",
+        required=True,
+    )
+
+    return parser.parse_args(args)
 
 
 def create_folder(root_folder, folder_name):
@@ -69,3 +102,38 @@ def create_file(root_folder, app_name, file, use_template=False):
     except Exception as e:
         print(f"Could not create file {full_file_path}.")
         raise e
+
+
+def app_folders(proj_name):
+    """Create a list with the project folder tree
+    Args:
+        proj_name (str): the name of the project, where the code will be hosted
+
+    Returns:
+        folder_list (list): list containing the main folder tree
+    """
+    folders_list = [
+        f"{proj_name}",
+        f"{proj_name}/data",
+        "tests",
+    ]
+    return folders_list
+
+
+def app_files(proj_name):
+    """Create a list with the project files
+    Args:
+        proj_name (str): the name of the project, where the code will be hosted
+
+    Returns:
+        files_list (list): list containing the file structure of the app
+    """
+    files_list = [
+        "README.md",
+        "setup.py",
+        "setup.cfg",
+        f"{proj_name}/__init__.py",
+        f"{proj_name}/{proj_name}.py",
+        "tests/tests.py",
+    ]
+    return files_list
