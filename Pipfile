@@ -1,0 +1,12 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+structure-me = {path = "./dist/structure_me-1.5.tar.gz"}
+
+[requires]
+python_version = "3.7"
