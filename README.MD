@@ -61,7 +61,7 @@ is still in your hands.
 
 2. Simple: create a simple folder/file structure. No comments.
 
-`structure_me -n <project_name>`
+`$ structure_me -n <project_name>`
 
 The resulting folder structure given a succesful execution will look like the 
 following folder tree:  
