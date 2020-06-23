@@ -40,7 +40,7 @@ be my guest to generate empty files and populating them yourselves.
 
 4. Create a repository in github, with a .gitignore and LICENSE files. When you do
 so, local and remote repos will be out of synch. Do the following to bring them
-back to the same thread. In your command line:
+back to the same thread. In your command line:  
 `$ git add *`  
 `$ git commit -m 'initial commit message'`  
 `$ git remote add origin https://github.com/your-username/your-repo.git`  
